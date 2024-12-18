@@ -35,7 +35,7 @@ const icons = [mailIcon, githubIcon, linkedInIcon, discordIcon];
 
 function Navbar() {
   return (
-    <ul className="flex flex-row justify-between p-4">
+    <ul className="flex flex-row justify-between">
       <ul className="flex flex-row divide-x-4">
         {navLinks.map((link) => {
           return <Navlink icon={link.icon} url={link.url} text={link.text} />;
