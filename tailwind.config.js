@@ -7,7 +7,8 @@ export default {
   ],
   theme: {
     fontFamily:{
-      'inter':["Inter", 'ui-sans-serif']
+      'inter':["Inter", 'ui-sans-serif'],
+      'darker-grotesque':["Darker Grotesque", 'ui-sans-serif']
     },
     extend: {},
   },

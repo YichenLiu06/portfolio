@@ -36,12 +36,12 @@ const icons = [mailIcon, githubIcon, linkedInIcon, discordIcon];
 function Navbar() {
   return (
     <ul className="flex flex-row justify-between p-4">
-      <ul className="flex flex-row divide-x-2">
+      <ul className="flex flex-row divide-x-4">
         {navLinks.map((link) => {
           return <Navlink icon={link.icon} url={link.url} text={link.text} />;
         })}
       </ul>
-      <ul className="flex justify-end gap-2">
+      <ul className="flex justify-end gap-4">
         {icons.map((icon) => {
           return <img src={icon} className="block w-7 h-7" />;
         })}
