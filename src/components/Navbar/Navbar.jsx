@@ -35,15 +35,19 @@ const icons = [mailIcon, githubIcon, linkedInIcon, discordIcon];
 
 function Navbar() {
   return (
-    <ul className="flex flex-row justify-between">
-      <ul className="flex flex-row divide-x-4">
+    <ul className="flex flex-row justify-between rounded-xl border">
+      <ul className="flex flex-row divide-x">
         {navLinks.map((link) => {
           return <Navlink icon={link.icon} url={link.url} text={link.text} />;
         })}
       </ul>
-      <ul className="flex justify-end gap-4">
+      <ul className="flex justify-end items-center">
         {icons.map((icon) => {
-          return <img src={icon} className="block w-7 h-7" />;
+          return (
+            <div className="p-4">
+              <img src={icon} className="block w-7 h-7" />
+            </div>
+        );
         })}
       </ul>
     </ul>
