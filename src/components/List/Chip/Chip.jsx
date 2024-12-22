@@ -1,8 +1,8 @@
 function Chip({icon, text}){
   return (
-    <div className="rounded-xl p-4 border-[--secondary] border flex flex-row gap-4 items-center shrink-0" >
-      <img src={icon} className="object-contain w-10 h-10"/>
-      <p className="text-2xl ">{text}</p>
+    <div className="rounded-xl p-3 border-[--secondary] border flex flex-row gap-4 items-center shrink-0" >
+      <img src={icon} className="object-contain w-8 h-8"/>
+      <p className="text-xl ">{text}</p>
     </div>
   )
 }

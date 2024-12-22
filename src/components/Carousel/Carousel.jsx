@@ -50,7 +50,7 @@ function Carousel({ displayCount = 3, children }) {
         <img src={back} className="size-10" />
       </button>
       <div
-        className="overflow-hidden grow"
+        className="overflow-hidden grow p-1"
         ref={viewportRef}
       >
         <ul style={{translate:`${-(itemWidth+16)*index}px`, transition: "translate 400ms ease-in-out"}} className="flex flex-row items-stretch shrink-0 gap-4">

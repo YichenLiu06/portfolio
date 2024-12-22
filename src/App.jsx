@@ -11,8 +11,10 @@ import NowPlaying from "./components/SpotifyWidget/NowPlaying"
 import SpotifyWidget from "./components/SpotifyWidget/SpotifyWidget"
 import home from "./assets/home.svg"
 import code from "./assets/code.svg"
+import frameworks from "./assets/frameworks.svg"
 import placeholder from "./assets/placeholder.jpg"
 import { languages } from "./data/data"
+import { frameworksAndLibraries } from "./data/data"
 import { about } from "./data/data"
 
 function App() {
@@ -20,10 +22,11 @@ function App() {
   return (
     <>
     
-    <div className="bg-[--primary] mx-80 flex flex-col text-[--text] gap-4 my-8 font-inter">
+    <div className="bg-[--primary] mx-60 flex flex-col text-[--text] gap-4 my-8 font-inter">
         <Navbar />
         <Header />
         <List icon={code} title="Languages" items={languages} />
+        <List icon={frameworks} title = "Frameworks and Libraries" items = {frameworksAndLibraries} />
         <Card title="About" text={about} />
         <SpotifyWidget />
         <div className="flex flex-row gap-4">
