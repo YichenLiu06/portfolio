@@ -1,10 +1,12 @@
-function Card({title, text}){
+function Card({title, text, children}){
   return (
-    <section>
-      <div className="p-4 border rounded-xl text-2xl">
-        <h3 className="font-bold underline">{title}</h3> {text}
+    <div className="border rounded-xl flex flex-col">
+      <h3 className="font-semibold text-3xl border-b p-4">{title}</h3>
+      <div className="p-4 text-xl">
+        {text}
       </div>
-    </section>
+      {children}
+    </div>
   )
 }
 

@@ -1,0 +1,6 @@
+.viewport {
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 0;
+}

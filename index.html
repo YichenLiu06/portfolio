@@ -11,9 +11,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&family=Oswald:wght@200..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite + React</title>
-  </head>
+  </head> 
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <script>window.global = window;</script>
+    <script type="module">
+        import { Buffer } from "buffer/"; // <-- no typo here ("/")
+        import querystring from "querystring";
+      
+        window.querystring = querystring
+        window.Buffer = Buffer;
+    </script>
   </body>
 </html>
