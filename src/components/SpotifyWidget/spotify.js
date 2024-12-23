@@ -1,9 +1,9 @@
 import querystring from 'querystring';
 const NOW_PLAYING_ENDPOINT = 'https://api.spotify.com/v1/me/player/currently-playing';
 const TOKEN_ENDPOINT = 'https://accounts.spotify.com/api/token';
-const client_id = '0850df1cf5784b44b1a6a9c2743afc53';
-const client_secret = 'ec6a43f759544630bef6a0d9951da0d4';
-const refresh_token = 'AQDcgZVd2PYlGN2-wrzeEusnvLyQTPt5O-EpP1JNVlu3Qil0_wJRBplvCRD_2NHbOvquS6DX1xLoFDdtd4F-XsjGK1n-Y7Le9OjMB3Qpx2xCL5aELxEo_ko-jTJdQ_F2Ky8';
+const client_id = import.meta.env.VITE_CLIENT_ID;
+const client_secret = import.meta.env.VITE_CLIENT_SECRET;
+const refresh_token = import.meta.env.VITE_REFRESH_TOKEN;
 
 
 //Function to generate an access token using the refresh token everytime the website is opened or refreshed
