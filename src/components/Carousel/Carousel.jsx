@@ -9,12 +9,6 @@ function Carousel({ displayCount = 3, children }) {
   const [viewportWidth, setViewportWidth] = useState(0);
   const viewportRef = useRef(null);
   const itemWidth = Math.round((viewportWidth - 16*(displayCount-1)) / displayCount);
-  console.log(viewportWidth)
-  console.log(Children.toArray(children).map((child, index) => (
-    <li key={index} width={itemWidth}>
-      {child}
-    </li>
-  )))
 
   function decrementIndex() {
     setIndex((index - 1 + (childCount - displayCount + 1)) % (childCount - displayCount + 1));
