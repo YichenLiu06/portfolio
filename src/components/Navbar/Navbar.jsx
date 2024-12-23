@@ -8,44 +8,67 @@ import linkedInIcon from "../../assets/linkedin.svg";
 import discordIcon from "../../assets/discord.svg";
 import mailIcon from "../../assets/mail.svg";
 
-const navLinks = [
+const navIcons = [
   {
-    icon: homeIcon,
-    url: "",
-    text: "Home",
+    icon:  mailIcon,
+    link: "mailto:yichen.liu@hotmail.com"
   },
   {
-    icon: aboutIcon,
-    url: "",
-    text: "About",
+    icon:  githubIcon,
+    link: "https://github.com/YichenLiu06"
   },
   {
-    icon: projectsIcon,
-    url: "",
-    text: "Projects",
+    icon:  linkedInIcon,
+    link: "https://www.linkedin.com/in/yichen-liu-9597b3271/"
   },
   {
-    icon: resumeIcon,
-    url: "",
-    text: "Resume",
-  },
+    icon:  discordIcon,
+    link: "https://discord.com/invite/XGxx6BjB"
+  }
 ];
 
-const icons = [mailIcon, githubIcon, linkedInIcon, discordIcon];
+function Navbar({scrollToAbout, scrollToProjects}) {
 
-function Navbar() {
+  const navLinks = [
+    {
+      icon: homeIcon,
+      url: "",
+      text: "Home",
+      handleClick: () => {scrollTo({top: 0, behavior:"smooth"})}
+    },
+    {
+      icon: aboutIcon,
+      url: "",
+      text: "About",
+      handleClick: scrollToAbout
+    },
+    {
+      icon: projectsIcon,
+      url: "",
+      text: "Projects",
+      handleClick: scrollToProjects
+    },
+    {
+      icon: resumeIcon,
+      url: "",
+      text: "Resume",
+    },
+  ];
+
   return (
-    <ul className="flex flex-row justify-between rounded-xl border">
+    <ul className="flex flex-row justify-between rounded-xl border sticky top-4 bg-slate-900">
       <ul className="flex flex-row divide-x">
         {navLinks.map((link) => {
-          return <Navlink icon={link.icon} url={link.url} text={link.text} />;
+          return <Navlink icon={link.icon} url={link.url} text={link.text} handleClick={link.handleClick}/>;
         })}
       </ul>
       <ul className="flex justify-end items-center">
-        {icons.map((icon) => {
+        {navIcons.map((icon) => {
           return (
             <div className="p-4">
-              <img src={icon} className="block w-7 h-7" />
+              <a href={icon.link}>
+                <img src={icon.icon} className="block w-7 h-7" />
+              </a>
             </div>
         );
         })}

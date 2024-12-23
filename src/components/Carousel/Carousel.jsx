@@ -45,12 +45,12 @@ function Carousel({ displayCount = 3, children }) {
   }
 
   return (
-    <div className="flex flex-row gap-2 w-full border rounded-xl p-4">
-      <button onClick={decrementIndex}>
-        <img src={back} className="size-10" />
+    <div className="flex flex-row gap-2 w-full items-center">
+      <button onClick={decrementIndex} className="shrink-0">
+        <img src={back} className="size-5"/>
       </button>
       <div
-        className="overflow-hidden grow p-1"
+        className="overflow-hidden grow p-1 rounded-xl"
         ref={viewportRef}
       >
         <ul style={{translate:`${-(itemWidth+16)*index}px`, transition: "translate 400ms ease-in-out"}} className="flex flex-row items-stretch shrink-0 gap-4">
@@ -61,8 +61,8 @@ function Carousel({ displayCount = 3, children }) {
           ))}
         </ul>
       </div>
-      <button onClick={incrementIndex}>
-        <img src={forward} className="size-10" />
+      <button onClick={incrementIndex} className="shrink-0">
+        <img src={forward} className="size-5" />
       </button>
     </div>
   );

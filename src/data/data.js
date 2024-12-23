@@ -71,7 +71,7 @@ export const developerTools = {
 
 }
 
-export const about="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tortor quam, condimentum vitae lorem vitae, suscipit aliquam felis. Morbi ac quam sollicitudin, hendrerit ipsum sit amet, aliquam leo. Donec venenatis lacinia ligula pretium ornare. Pellentesque auctor nunc eu risus accumsan facilisis. Donec dui leo, convallis eget placerat id, gravida et nulla. Nulla vel quam neque. Praesent scelerisque finibus accumsan. Nullam scelerisque, sem auctor vestibulum suscipit, ex sem ultrices est, quis elementum felis enim sit amet lectus. Aliquam facilisis est arcu, quis consequat neque ultricies eget. Vestibulum dictum urna quam. Phasellus laoreet tincidunt sapien non consectetur."
+export const about="Hello! My name is Yichen Liu and I am currently a first year student majoring in Computer Science at the University of Waterloo. I am currently focused on building strong fundamental skills in Web Development, and am always seeking to create easy to use software that utilizes technology to its full potential. However, I am eager to  explore new fields of computer science in the future, such as machine learning and human computer interaction, and hope to apply software in fun and creative ways. In my free time, I like to draw and am currently trying my hand at digital art. I love and appreciate animation, and am always gushing over my favourite works that push the boundaries of the medium. I’m almost always listening to something, and you can find almost every genre and subgenre of rock in my Spotify playlists. You can see what I’m listening to right now in the section below!"
 
 
 /*
