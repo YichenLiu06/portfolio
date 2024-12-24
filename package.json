@@ -10,13 +10,16 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@react-three/fiber": "^8.17.10",
+    "@tailwindcss/line-clamp": "^0.4.4",
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "querystring": "^0.2.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "request": "^2.88.2"
+    "request": "^2.88.2",
+    "three": "^0.171.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.13.0",

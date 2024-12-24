@@ -2,8 +2,8 @@ import Chip from "./Chip/Chip";
 
 function List({icon, title, items}){
   return (
-    <div className="flex flex-col gap-4 border rounded-xl p-4">
-      <div className="flex flex-row gap-2 items-center max-w-full">
+    <div className="flex flex-col gap-4 border rounded-xl p-3">
+      <div className="flex flex-row gap-2 max-w-full items-end">
         <img src={icon} className="w-7 h-7 object-contain"/>
         <h2 className="text-3xl font-semibold">
           {title}

@@ -29,11 +29,11 @@ function SpotifyWidget(){
       secondsPlayed = secondsPlayed % 60;
       let percentagePlayed = (nowPlaying.timePlayed / nowPlaying.timeTotal) * 100
       return (
-        <div className="border rounded-xl p-4 flex flex-row gap-6 items-center">
-          <img src={nowPlaying.albumImageUrl} alt = "Album" className="size-24 rounded-xl"/>
+        <div className="border rounded-xl p-2 flex flex-row gap-4 items-center w-1/2">
+          <img src={nowPlaying.albumImageUrl} alt = "Album" className="size-20 rounded-xl"/>
           <div className="flex flex-col w-full">
-            <h3 className="font-semibold text-2xl">{nowPlaying.title}</h3>
-            <p>{nowPlaying.artist}</p>
+            <h3 className="font-semibold text-lg line-clamp-1">{nowPlaying.title}</h3>
+            <p className= "font-semibold text-sm">{nowPlaying.artist}</p>
             <div className="h-2 flex flex-col bg-slate-950 rounded-full"> 
               <div style={{width:`${percentagePlayed}%`}} className='h-full bg-green-600 rounded-full'>
 
@@ -49,7 +49,7 @@ function SpotifyWidget(){
     }
     else if(nowPlaying === 'Currently Not Playing'){
       return (
-        <div className="h-24 border rounded-xl p-4 text-2xl flex flex-row items-center justify-between">
+        <div className="h-24 border rounded-xl p-4 text-2xl flex flex-row items-center justify-between w-1/2">
           Sorry! I'm not playing anything at the moment.
           <img src={spotify} className="size-10"/>
         </div>

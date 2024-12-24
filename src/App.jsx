@@ -7,9 +7,10 @@ import Card from "./components/Card/Card"
 import Education from "./components/Education/Education"
 import WorkExperience from "./components/WorkExperience/WorkExperience"
 import Carousel from "./components/Carousel/Carousel"
-import ProjectCard from "./components/ProjectCard/ProjectCard"
+import ProjectCard from "./components/DisplayCard/DisplayCard"
 import SpotifyWidget from "./components/SpotifyWidget/SpotifyWidget"
 import Projects from "./components/Projects/Projects"
+import TitleText from "./components/TitleText/TitleText"
 import home from "./assets/home.svg"
 import code from "./assets/code.svg"
 import frameworks from "./assets/frameworks.svg"
@@ -18,31 +19,32 @@ import { languages } from "./data/data"
 import { frameworksAndLibraries } from "./data/data"
 import { about } from "./data/data"
 import { useEffect, useRef } from "react"
+import Skills from "./components/Skills/Skills"
 
 function App() {
   const aboutRef = useRef(null);
   const projectsRef = useRef(null);
   function scrollToAbout(){
-    aboutRef.current.scrollIntoView({behavior: "smooth"})
+    aboutRef.current.scrollIntoView({block: "center", behavior: "smooth"})
   }
   function scrollToProjects(){
-    projectsRef.current.scrollIntoView({behavior: "smooth"})
+    projectsRef.current.scrollIntoView({ behavior: "smooth"})
   }
 
   return (
-    <div className="min-h-screen bg-slate-900 py-4 ">
-      <div className=" mx-60 flex flex-col text-[--text] gap-4 my-8 font-inter">
-        <Navbar scrollToAbout={scrollToAbout} scrollToProjects={scrollToProjects}/>
-        <Header />
-        <List icon={code} title="Languages" items={languages} />
-        <List icon={frameworks} title = "Frameworks and Libraries" items = {frameworksAndLibraries} />
+    <div className="min-h-screen bg-slate-900 font-darker-grotesque py-4 px-8">
+       <Navbar scrollToAbout={scrollToAbout} scrollToProjects={scrollToProjects}/>
+      <div className=" flex flex-col text-[--text] gap-4 my-8 px-8 font-semibold items-stretch border-x">
+       
         <About innerRef={aboutRef} />
-        <SpotifyWidget />
+        <Skills />
+        <TitleText text="Background"  />
+        
         <div className="flex flex-row gap-4">
-
           <Education />
           <WorkExperience />
         </div>
+        <TitleText text="Projects" />
         <Projects innerRef={projectsRef} />
       </div> 
     </div>

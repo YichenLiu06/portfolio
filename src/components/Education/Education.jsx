@@ -3,7 +3,7 @@ import Card from "../Card/Card";
 
 function Education(){
   return (
-    <div className="w-2/5">
+    <div className="w-1/3 ">
       <Card title={"Education"}>
         <img src={uw} className="w-full p-8 object-contain" />
         <div className="px-4 pb-4">

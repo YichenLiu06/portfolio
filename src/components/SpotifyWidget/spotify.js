@@ -43,6 +43,7 @@ export const getNowPlaying = async () => {
 
     //If response status > 400 means there was some error while fetching the required information
     if (response.status > 400) {
+      console.log(response.headers)
       throw new Error('Unable to Fetch Song');
     } else if(response.status === 204) { //The response was fetched but there was no content
       throw new Error('Currently Not Playing')

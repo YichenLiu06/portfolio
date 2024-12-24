@@ -56,8 +56,8 @@ function Navbar({scrollToAbout, scrollToProjects}) {
   ];
 
   return (
-    <ul className="flex flex-row justify-between rounded-xl border sticky top-4 bg-slate-900">
-      <ul className="flex flex-row divide-x">
+    <ul className="flex flex-row justify-between sticky top-0 bg-slate-900 z-50">
+      <ul className="flex flex-row">
         {navLinks.map((link) => {
           return <Navlink icon={link.icon} url={link.url} text={link.text} handleClick={link.handleClick}/>;
         })}
@@ -65,7 +65,7 @@ function Navbar({scrollToAbout, scrollToProjects}) {
       <ul className="flex justify-end items-center">
         {navIcons.map((icon) => {
           return (
-            <div className="p-4">
+            <div className="p-3">
               <a href={icon.link}>
                 <img src={icon.icon} className="block w-7 h-7" />
               </a>
