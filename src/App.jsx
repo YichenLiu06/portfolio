@@ -32,10 +32,9 @@ function App() {
   }
 
   return (
-    <div className="min-h-screen bg-slate-900 font-darker-grotesque py-4 px-8">
-       <Navbar scrollToAbout={scrollToAbout} scrollToProjects={scrollToProjects}/>
-      <div className=" flex flex-col text-[--text] gap-4 my-8 px-8 font-semibold items-stretch border-x">
-       
+    <div className="min-h-screen bg-slate-900 font-darker-grotesque px-8">
+      <div className=" flex flex-col text-[--text] gap-4 px-8 font-semibold items-stretch border-x">
+        <Navbar scrollToAbout={scrollToAbout} scrollToProjects={scrollToProjects}/>
         <About innerRef={aboutRef} />
         <Skills />
         <TitleText text="Background"  />
