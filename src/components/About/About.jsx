@@ -55,6 +55,7 @@ function About({innerRef}){
                             {'\n \n'} 
                             In my free time, I like to draw and am currently trying my hand at digital art. I love and appreciate animation, and am always gushing over my favourite works that push the boundaries of the medium. I’m almost always listening to something, and you can find almost every genre and subgenre of rock in my Spotify playlists. <span className="text-violet-400">You can see what I'm listening to right now below!</span>
                         </p>
+                        <SpotifyWidget />
                     </div>
                 </div>
             
