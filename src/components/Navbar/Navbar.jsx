@@ -62,12 +62,12 @@ function Navbar({scrollToAbout, scrollToProjects}) {
           return <Navlink icon={link.icon} url={link.url} text={link.text} handleClick={link.handleClick}/>;
         })}
       </ul>
-      <ul className="flex justify-end items-center">
+      <ul className="flex justify-end items-center gap-6">
         {navIcons.map((icon) => {
           return (
-            <div className="p-3">
+            <div >
               <a href={icon.link}>
-                <img src={icon.icon} className="block w-7 h-7" />
+                <img src={icon.icon} className="w-5 h-7" />
               </a>
             </div>
         );

@@ -3,7 +3,7 @@ const NOW_PLAYING_ENDPOINT = 'https://api.spotify.com/v1/me/player/currently-pla
 const TOKEN_ENDPOINT = 'https://accounts.spotify.com/api/token';
 const client_id = import.meta.env.VITE_CLIENT_ID;
 const client_secret = import.meta.env.VITE_CLIENT_SECRET;
-const refresh_token = import.meta.env.VITE_REFRESH_TOKEN;
+const refresh_token =import.meta.env.VITE_REFRESH_TOKEN;
 
 
 //Function to generate an access token using the refresh token everytime the website is opened or refreshed

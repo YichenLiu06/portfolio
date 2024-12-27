@@ -14,6 +14,7 @@ function TitleText({text,position=[0,0,0]}) {
     const font = new FontLoader().parse(michroma)
     const textOptions = {font, size:2, depth:0.02, height: 0.1, curveSegments:5, bevelEnabled : true, bevelSize: 0.05, bevelSegments: 5, bevelThickness: 0.1} 
     const geometry = new TextGeometry( text, textOptions );
+    const [hover, setHover] = useState(false)
     geometry.computeBoundingBox();
 
 
@@ -21,10 +22,11 @@ function TitleText({text,position=[0,0,0]}) {
     // Calculate the center of the bounding box
     geometry.center()
     return (
-        <div className='h-20'>
+        <div className='h-20 w-full' onPointerOver={(event) => {setHover(true)}} onPointerOut={(event) => {setHover(false)}}>
             <Canvas camera={{fov: 75, near: 0.1, far: 1000, position: [0,0,3]}}>
                 <pointLight position={[0, 0, 10]} decay={0} intensity={2} color="white"/>
                 <mesh
+                    scale={hover ? 1.2 : 1}
                     ref={textMesh}
                     position={position}
                     geometry={geometry}

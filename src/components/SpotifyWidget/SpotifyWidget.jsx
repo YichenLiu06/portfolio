@@ -47,7 +47,7 @@ function SpotifyWidget(){
         </div>
       )
     }
-    else if(nowPlaying === 'Currently Not Playing'){
+    else {
       return (
         <div className="h-24 border rounded-xl p-4 text-2xl flex flex-row items-center justify-between w-1/2">
           Sorry! I'm not playing anything at the moment.

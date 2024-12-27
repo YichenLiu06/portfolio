@@ -8,10 +8,11 @@ function Carousel({ displayCount = 1, horizontal = true, className = "", childre
   const [index, setIndex] = useState(0);
   const [viewportWidth, setViewportWidth] = useState(0);
   const [viewportHeight, setViewportHeight] = useState(0);
+  const [hover, setHover] = useState(false)
   const viewportRef = useRef(null);
   const itemWidth = horizontal ? Math.round((viewportWidth - 16 * (displayCount - 1)) / displayCount) : null;
   const itemHeight = horizontal ? null : Math.round((viewportHeight - 16 * (displayCount - 1)) / displayCount);
-  const carouselItemStyle = horizontal ? { width: `${itemWidth}px`, height: "100%", flexShrink: 0 } : { height: `${itemHeight}px`, width: "100%", flexShrink: 0 }
+  const carouselItemStyle = horizontal ? { width: `${itemWidth}px`, flexShrink: 0 } : { height: `${itemHeight}px`, width: "100%", flexShrink: 0 }
 
   function decrementIndex() {
     setIndex((index - 1 + (childCount - displayCount + 1)) % (childCount - displayCount + 1));
@@ -27,16 +28,26 @@ function Carousel({ displayCount = 1, horizontal = true, className = "", childre
       setViewportHeight(entries[0].contentRect.height)
     })
     observer.observe(viewportRef.current)
-    return () => viewportRef.current && observer.unobserve(viewportRef.current)
-  }, [itemWidth, viewportWidth, viewportHeight, index, displayCount]);
+    if(!hover){
+      const slideInterval = setInterval(incrementIndex, 2000);
+      return () => {
+        clearInterval(slideInterval);
+        return viewportRef.current && observer.unobserve(viewportRef.current)
+      }
+    }
+    else{
+      return viewportRef.current && observer.unobserve(viewportRef.current)
+    }
+    
+  }, [itemWidth, viewportWidth, hover, viewportHeight, index, displayCount]);
 
   return (
-    <div className={"flex gap-2 items-center" + className} style={horizontal ? {flexDirection : "row"} : {flexDirection : "column"}}>
+    <div className={"flex gap-2 items-center rounded-xl" + className} style={ {flexDirection : (horizontal ? "row" : "column")}} onPointerOver={(event)=>{setHover(true)}} onPointerOut={(event)=>{setHover(false)}}>
       <button onClick={decrementIndex} className="shrink-0">
         <img src={back} className="size-5" />
       </button>
       <div
-        className="overflow-hidden p-1 rounded-xl h-full"
+        className="overflow-hidden p-1 h-full w-full"
         ref={viewportRef}
       >
         <ul style={horizontal ? {transform: `translate(${-(itemWidth + 16) * index}px,0)`, flexDirection:"row", height:"100%" } : {transform: `translate(0,${-(itemHeight + 16) * index}px)`, flexDirection:"column", width:"100%" } } className="flex transition-transform duration-500 ease-in-out items-stretch shrink-0 gap-4">
