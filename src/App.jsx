@@ -21,6 +21,7 @@ import { about } from "./data/data"
 import { useEffect, useRef } from "react"
 import Skills from "./components/Skills/Skills"
 
+
 function App() {
   const aboutRef = useRef(null);
   const projectsRef = useRef(null);

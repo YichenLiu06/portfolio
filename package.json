@@ -12,6 +12,7 @@
   "dependencies": {
     "@react-three/fiber": "^8.17.10",
     "@tailwindcss/line-clamp": "^0.4.4",
+    "@vercel/analytics": "^1.4.1",
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",

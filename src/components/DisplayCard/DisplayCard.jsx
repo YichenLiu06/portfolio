@@ -6,7 +6,7 @@ function DisplayCard({title, children, link="", image, icons=[], displayHeight =
 
   return (
     <a href={link} className={"block flex flex-col overflow-hidden rounded-xl border h-full transition-all duration-300 ease-in-out " + className + hoverStyle} onPointerOver={(event) => { setHover(true) }} onPointerOut={(event) => { setHover(false) }}>
-      <img src = {image} style={{height:`${displayHeight}px`}} className="object-cover opacity-70"/>
+      <img src = {image} style={{height:`${displayHeight}px`}} className="object-cover opacity-100"/>
       <div className="p-4 flex flex-col grow">
         <h3 className="font-semibold text-3xl ">{title}</h3>
         <div className="px-4 pb-4 rounded-b-xl grow">
