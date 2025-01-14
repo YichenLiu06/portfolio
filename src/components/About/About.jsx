@@ -40,7 +40,7 @@ function About({innerRef}){
                     
                     <div className="flex flex-col gap-4 items-center">
                         <div className="flex flex-row items-center">
-                            <img src={avatar} className=" size-40 rounded-xl float-left mr-6" /> 
+                            <img src={avatar} className=" size-40 rounded-xl float-left mr-6 object-cover" /> 
                             <p>
                                 Hello! My name is <span className="text-violet-400">Yichen Liu</span> and I am currently a first year student majoring in <span className="text-violet-400">Computer Science</span> at the <span className="text-violet-400">University of Waterloo</span>. I am currently focused on building strong fundamental skills in <span className="text-violet-400">Web Development</span>, and am always seeking to create easy to use software that utilizes technology to its full potential. However, I am eager to  explore new fields of computer science in the future, such as <span className="text-violet-400">Machine Learning and Human Computer Interaction</span>, and hope to apply software in fun and creative ways.
                                 {'\n \n'} 
