@@ -6,6 +6,7 @@ import hire from "../../assets/hire.svg"
 import placeholder from "../../assets/placeholder.jpg"
 import wchscsclub from "../../assets/wchscsclub.png"
 import inthinkingglc from "../../assets/inthinkingglc.png"
+import uwvac from "../../assets/uwvac.jpg"
 
 function WorkExperience({items}){
   const [hover, setHover] = useState(false)
@@ -35,6 +36,12 @@ function WorkExperience({items}){
               <h2 className="text-lg text-slate-400">Inthinking Youth Club</h2>
               <li>Hosted weekly lessons in C++ on common competitive programming data structures and algorithms to 50+ students </li>
               <li>Compiled a comprehensive competitive programming curriculum, including visual aids and problemsets with solutions</li>
+            </ul>
+          </DisplayCard>
+          <DisplayCard title="Visual Arts Club Executive" image={uwvac} displayHeight={80}>
+            <ul  className="ml-5 list-disc list-outside text-base marker:text-violet-400">
+              <h2 className="text-lg text-slate-400">The University of Waterloo</h2>
+              <li>Coming Soon!</li>
             </ul>
           </DisplayCard>
         </Carousel>
