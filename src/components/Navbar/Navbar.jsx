@@ -50,7 +50,7 @@ function Navbar({scrollToAbout, scrollToProjects}) {
     },
     {
       icon: resumeIcon,
-      url: "",
+      url: "/resume.pdf",
       text: "Resume",
     },
   ];

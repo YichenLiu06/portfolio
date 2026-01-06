@@ -40,7 +40,7 @@ function App() {
         <Skills />
         <TitleText text="Background"  />
         
-        <div className="flex flex-row gap-4">
+        <div className="flex flex-row items-stretch gap-4">
           <Education />
           <WorkExperience />
         </div>

@@ -5,6 +5,14 @@ import DisplayCard from "../DisplayCard/DisplayCard";
 import hire from "../../assets/hire.svg"
 import placeholder from "../../assets/placeholder.jpg"
 import wchscsclub from "../../assets/wchscsclub.png"
+import micromarthero from "../../assets/micromarthero.png"
+import micromart from "../../assets/micromart.jpg"
+import wato from "../../assets/wato.png"
+import watohero from "../../assets/watohero.png"
+import vip from "../../assets/vip.jpg"
+import viphero from "../../assets/viphero.png"
+import geesehacks from "../../assets/geesehacks.jpg"
+import geesehackshero from "../../assets/geesehackshero.jpg"
 import inthinkingglc from "../../assets/inthinkingglc.png"
 import uwvac from "../../assets/uwvac.jpg"
 
@@ -20,28 +28,32 @@ function WorkExperience({items}){
           </div>
         </a>
         <Carousel displayCount={2} horizontal={true} className="grow h-full">
-          <DisplayCard title="CS Club Executive" image={wchscsclub} displayHeight={80}>
+          <DisplayCard title="Software Engineering Intern" subtitle="Micromart" hero={micromarthero} primaryIcon={micromart} displayHeight={80}>
             <ul  className="ml-5 list-disc list-outside text-base marker:text-violet-400">
-              <h2 className="text-lg text-slate-400">Western Canada High School</h2>
-              <li>Organized events in collaboration with several other clubs and created basic computer science problems to raise
-              interest</li>
-              <li>Hosted weekly lessons in competitive programming in C++ to 30+ students using Codeforces Polygon to write
-              original problems to test competitive programming fundamentals</li>
-              <li> Hosted school-wide events where students were invited to create original projects using knowledge taught during
-              club lessons</li>
+              <li>Developed end-to-end tests using <b>Cypress</b>, improving test reliability and coverage for a <b>React-based</b> web platform.</li>
+              <li>Optimized CI/CD performance in CircleCI with caching, reducing build and test times by up to <b>40%</b>.</li>
+              <li>Implemented a fraud prevention system using <b>Stripe</b> to close a payment loophole with removed payment methods</li>
             </ul>
           </DisplayCard>
-          <DisplayCard title="Competitive Programming Tutor" image={inthinkingglc} displayHeight={80}>
+          <DisplayCard title="Software Developer" subtitle="WATONOMOUS" hero={watohero} primaryIcon={wato} displayHeight={80}>
             <ul  className="ml-5 list-disc list-outside text-base marker:text-violet-400">
-              <h2 className="text-lg text-slate-400">Inthinking Youth Club</h2>
-              <li>Hosted weekly lessons in C++ on common competitive programming data structures and algorithms to 50+ students </li>
-              <li>Compiled a comprehensive competitive programming curriculum, including visual aids and problemsets with solutions</li>
+              <li>Developed ROS-bridge websocket interface between VR and ROS, supporting low-latency teleoperation</li>
+              <li>Implemented a <b>pairing token system</b> to authenticate websocket connection requests</li>
+              <li>Designed a system to map <b>VR-captured</b> hand data into corresponding robot <b>joint positions</b> for tele-operation</li>
             </ul>
           </DisplayCard>
-          <DisplayCard title="Visual Arts Club Executive" image={uwvac} displayHeight={80}>
+          <DisplayCard title="Undergraduate Research Assistant" subtitle="Vision and Image Processing Lab" hero={viphero} primaryIcon={vip} displayHeight={80}>
             <ul  className="ml-5 list-disc list-outside text-base marker:text-violet-400">
-              <h2 className="text-lg text-slate-400">The University of Waterloo</h2>
-              <li>Coming Soon!</li>
+              <li>projected LiDAR change maps into 2D space to change masks for supervising <b>3D Gaussian Splatting</b> updates</li>
+              <li>Implemented a 2D mask majority-vote algorithm for change classification of 3D Gaussian Splatting scenes</li>
+              <li>Implemented approximate-nearest-neighbour with distance-threshold filtering to isolate object-level changes between LiDAR point clouds</li>
+            </ul>
+          </DisplayCard>
+          <DisplayCard title="Hackathon Organizer (Tech)" subtitle="GeeseHacks 2026" hero={geesehackshero} primaryIcon={geesehacks} displayHeight={80}>
+            <ul  className="ml-5 list-disc list-outside text-base marker:text-violet-400">
+              <li>Developed a full-stack hackathon portal with an integrated event schedule and participant dashboard in <b>Next.js</b></li>
+              <li>Designed and implemented a scalable database schema to manage participant information and application data</li>
+              <li>Developed Next.js API endpoints to update and manage applicant data, utilizing <b>Zod</b> for schema validation and <b>pg-promise</b> for database queries</li>
             </ul>
           </DisplayCard>
         </Carousel>
